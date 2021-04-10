@@ -2,11 +2,11 @@ import setuptools
 
 from sticker.get_version import git_tag, git_revision, version, linkified_version
 
-with open("requirements.txt") as reqs:
+with open("requirements.txt",  encoding="utf8") as reqs:
     install_requires = reqs.read().splitlines()
 
 try:
-    long_desc = open("README.md").read()
+    long_desc = open("README.md",  encoding="utf8").read()
 except IOError:
     long_desc = "Failed to read README.md"
 
